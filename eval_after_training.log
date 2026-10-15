@@ -1,0 +1,421 @@
+[Tue Oct 13 01:46:48 AM EDT 2026] waiting for training to finish
+[Tue Oct 13 03:56:49 AM EDT 2026] training process ended
+training reached 30000 steps
+[Tue Oct 13 03:57:19 AM EDT 2026] evaluating 005000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6734.11it/s]
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 25  max_lift= 11.7 cm  ended: env_success
+seed 1001: success  steps= 28  max_lift= 12.2 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1003: success  steps= 20  max_lift= 11.2 cm  ended: env_success
+seed 1004: success  steps= 30  max_lift= 11.5 cm  ended: env_success
+seed 1005: success  steps= 23  max_lift= 10.2 cm  ended: env_success
+seed 1006: success  steps= 23  max_lift= 11.2 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.0 cm  ended: env_success
+seed 1008: success  steps= 24  max_lift= 11.6 cm  ended: env_success
+seed 1009: success  steps= 24  max_lift= 12.0 cm  ended: env_success
+seed 1010: success  steps= 24  max_lift= 11.9 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 11.4 cm  ended: env_success
+seed 1012: success  steps= 28  max_lift= 12.2 cm  ended: env_success
+seed 1013: success  steps= 29  max_lift= 10.3 cm  ended: env_success
+seed 1014: success  steps= 26  max_lift= 12.0 cm  ended: env_success
+seed 1015: success  steps= 23  max_lift= 12.2 cm  ended: env_success
+seed 1016: success  steps= 21  max_lift= 11.8 cm  ended: env_success
+seed 1017: success  steps= 28  max_lift= 11.7 cm  ended: env_success
+seed 1018: success  steps= 25  max_lift= 10.4 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 11.8 cm  ended: env_success
+seed 1020: success  steps= 23  max_lift= 11.7 cm  ended: env_success
+seed 1021: success  steps= 23  max_lift= 11.8 cm  ended: env_success
+seed 1022: success  steps= 29  max_lift= 11.6 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 11.6 cm  ended: env_success
+seed 1024: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1025: success  steps= 22  max_lift= 10.7 cm  ended: env_success
+seed 1026: success  steps= 23  max_lift= 10.7 cm  ended: env_success
+seed 1027: success  steps= 24  max_lift= 10.1 cm  ended: env_success
+seed 1028: success  steps= 22  max_lift= 11.6 cm  ended: env_success
+seed 1029: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1030: success  steps= 22  max_lift= 12.2 cm  ended: env_success
+seed 1031: success  steps= 28  max_lift= 11.6 cm  ended: env_success
+seed 1032: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1033: FAIL     steps=100  max_lift=  0.7 cm  ended: timeout
+seed 1034: success  steps= 19  max_lift= 11.3 cm  ended: env_success
+seed 1035: success  steps= 27  max_lift= 10.1 cm  ended: env_success
+seed 1036: success  steps= 21  max_lift= 11.6 cm  ended: env_success
+seed 1037: success  steps= 20  max_lift= 11.6 cm  ended: env_success
+seed 1038: FAIL     steps=100  max_lift=  0.5 cm  ended: timeout
+seed 1039: success  steps= 22  max_lift= 11.9 cm  ended: env_success
+seed 1040: success  steps= 18  max_lift= 11.8 cm  ended: env_success
+seed 1041: success  steps= 47  max_lift= 11.6 cm  ended: env_success
+seed 1042: success  steps= 25  max_lift= 10.3 cm  ended: env_success
+seed 1043: success  steps= 24  max_lift= 11.6 cm  ended: env_success
+seed 1044: success  steps= 26  max_lift= 12.1 cm  ended: env_success
+seed 1045: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1046: success  steps= 28  max_lift= 11.1 cm  ended: env_success
+seed 1047: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1048: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1049: success  steps= 23  max_lift= 12.1 cm  ended: env_success
+
+smolvla30k_005000: 41/50 reached 5 cm = 82%  (95% CI 69% to 90%)
+  environment's own 10 cm rule: 41/50
+  cube lifted at all (over 2 cm): 41/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+[Tue Oct 13 03:58:52 AM EDT 2026] evaluating 010000
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6758.56it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 24  max_lift= 12.1 cm  ended: env_success
+seed 1001: success  steps= 25  max_lift= 12.1 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1003: success  steps= 21  max_lift= 10.9 cm  ended: env_success
+seed 1004: success  steps= 28  max_lift= 12.0 cm  ended: env_success
+seed 1005: success  steps= 23  max_lift= 10.5 cm  ended: env_success
+seed 1006: success  steps= 21  max_lift= 11.9 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.1 cm  ended: env_success
+seed 1008: success  steps= 24  max_lift= 12.0 cm  ended: env_success
+seed 1009: success  steps= 22  max_lift= 10.6 cm  ended: env_success
+seed 1010: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1012: success  steps= 26  max_lift= 10.2 cm  ended: env_success
+seed 1013: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1014: success  steps= 24  max_lift= 12.4 cm  ended: env_success
+seed 1015: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1016: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1017: success  steps= 27  max_lift= 11.9 cm  ended: env_success
+seed 1018: success  steps= 25  max_lift= 10.2 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 12.2 cm  ended: env_success
+seed 1020: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1021: success  steps= 23  max_lift= 11.8 cm  ended: env_success
+seed 1022: success  steps= 27  max_lift= 11.9 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1024: success  steps= 25  max_lift= 12.3 cm  ended: env_success
+seed 1025: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1026: success  steps= 22  max_lift= 10.1 cm  ended: env_success
+seed 1027: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1028: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1029: success  steps= 26  max_lift= 11.5 cm  ended: env_success
+seed 1030: success  steps= 22  max_lift= 10.3 cm  ended: env_success
+seed 1031: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1032: FAIL     steps=100  max_lift=  0.7 cm  ended: timeout
+seed 1033: success  steps= 22  max_lift= 11.9 cm  ended: env_success
+seed 1034: success  steps= 21  max_lift= 11.4 cm  ended: env_success
+seed 1035: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1036: success  steps= 21  max_lift= 12.0 cm  ended: env_success
+seed 1037: success  steps= 22  max_lift= 12.5 cm  ended: env_success
+seed 1038: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1039: success  steps= 21  max_lift= 11.8 cm  ended: env_success
+seed 1040: success  steps= 18  max_lift= 10.1 cm  ended: env_success
+seed 1041: success  steps= 24  max_lift= 11.4 cm  ended: env_success
+seed 1042: success  steps= 24  max_lift= 10.9 cm  ended: env_success
+seed 1043: success  steps= 24  max_lift= 12.1 cm  ended: env_success
+seed 1044: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1045: success  steps= 19  max_lift= 10.4 cm  ended: env_success
+seed 1046: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1047: success  steps= 24  max_lift= 11.8 cm  ended: env_success
+seed 1048: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1049: success  steps= 22  max_lift= 10.1 cm  ended: env_success
+
+smolvla30k_010000: 38/50 reached 5 cm = 76%  (95% CI 63% to 86%)
+  environment's own 10 cm rule: 38/50
+  cube lifted at all (over 2 cm): 38/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+[Tue Oct 13 04:00:30 AM EDT 2026] evaluating 015000
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6946.56it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 24  max_lift= 11.8 cm  ended: env_success
+seed 1001: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1003: success  steps= 21  max_lift= 11.1 cm  ended: env_success
+seed 1004: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1005: success  steps= 23  max_lift= 10.3 cm  ended: env_success
+seed 1006: success  steps= 21  max_lift= 12.0 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.0 cm  ended: env_success
+seed 1008: success  steps= 23  max_lift= 12.1 cm  ended: env_success
+seed 1009: success  steps= 22  max_lift= 10.1 cm  ended: env_success
+seed 1010: success  steps= 23  max_lift= 12.2 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1012: success  steps= 28  max_lift= 12.3 cm  ended: env_success
+seed 1013: success  steps= 25  max_lift= 12.1 cm  ended: env_success
+seed 1014: success  steps= 25  max_lift= 12.5 cm  ended: env_success
+seed 1015: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1016: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1017: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1018: success  steps= 25  max_lift= 10.3 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1020: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1021: success  steps= 23  max_lift= 12.0 cm  ended: env_success
+seed 1022: success  steps= 28  max_lift= 12.1 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 12.1 cm  ended: env_success
+seed 1024: success  steps= 24  max_lift= 12.4 cm  ended: env_success
+seed 1025: success  steps= 22  max_lift= 10.6 cm  ended: env_success
+seed 1026: success  steps= 22  max_lift= 10.0 cm  ended: env_success
+seed 1027: success  steps= 24  max_lift= 12.3 cm  ended: env_success
+seed 1028: success  steps= 22  max_lift= 11.6 cm  ended: env_success
+seed 1029: success  steps= 27  max_lift= 12.1 cm  ended: env_success
+seed 1030: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1031: success  steps= 28  max_lift= 12.4 cm  ended: env_success
+seed 1032: FAIL     steps=100  max_lift=  0.2 cm  ended: timeout
+seed 1033: success  steps= 22  max_lift= 12.1 cm  ended: env_success
+seed 1034: success  steps= 20  max_lift= 11.6 cm  ended: env_success
+seed 1035: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1036: success  steps= 21  max_lift= 12.0 cm  ended: env_success
+seed 1037: success  steps= 21  max_lift= 11.3 cm  ended: env_success
+seed 1038: FAIL     steps=100  max_lift=  0.2 cm  ended: timeout
+seed 1039: success  steps= 21  max_lift= 11.6 cm  ended: env_success
+seed 1040: success  steps= 18  max_lift= 10.1 cm  ended: env_success
+seed 1041: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1042: success  steps= 24  max_lift= 10.4 cm  ended: env_success
+seed 1043: success  steps= 24  max_lift= 12.1 cm  ended: env_success
+seed 1044: success  steps= 26  max_lift= 12.4 cm  ended: env_success
+seed 1045: success  steps= 20  max_lift= 12.1 cm  ended: env_success
+seed 1046: success  steps= 29  max_lift= 12.2 cm  ended: env_success
+seed 1047: success  steps= 23  max_lift= 12.1 cm  ended: env_success
+seed 1048: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1049: success  steps= 23  max_lift= 12.2 cm  ended: env_success
+
+smolvla30k_015000: 43/50 reached 5 cm = 86%  (95% CI 74% to 93%)
+  environment's own 10 cm rule: 43/50
+  cube lifted at all (over 2 cm): 43/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+[Tue Oct 13 04:01:55 AM EDT 2026] evaluating 020000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6343.82it/s]
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 24  max_lift= 12.1 cm  ended: env_success
+seed 1001: success  steps= 25  max_lift= 12.3 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1003: success  steps= 21  max_lift= 11.7 cm  ended: env_success
+seed 1004: success  steps= 27  max_lift= 11.9 cm  ended: env_success
+seed 1005: success  steps= 23  max_lift= 10.0 cm  ended: env_success
+seed 1006: success  steps= 21  max_lift= 12.0 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.1 cm  ended: env_success
+seed 1008: success  steps= 23  max_lift= 11.8 cm  ended: env_success
+seed 1009: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1010: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 12.1 cm  ended: env_success
+seed 1012: success  steps= 28  max_lift= 12.3 cm  ended: env_success
+seed 1013: success  steps= 25  max_lift= 12.1 cm  ended: env_success
+seed 1014: success  steps= 25  max_lift= 12.2 cm  ended: env_success
+seed 1015: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1016: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1017: success  steps= 27  max_lift= 11.9 cm  ended: env_success
+seed 1018: success  steps= 25  max_lift= 10.1 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 12.3 cm  ended: env_success
+seed 1020: success  steps= 22  max_lift= 12.0 cm  ended: env_success
+seed 1021: success  steps= 23  max_lift= 12.1 cm  ended: env_success
+seed 1022: success  steps= 28  max_lift= 11.9 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1024: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1025: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1026: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1027: success  steps= 24  max_lift= 12.1 cm  ended: env_success
+seed 1028: success  steps= 22  max_lift= 11.9 cm  ended: env_success
+seed 1029: success  steps= 27  max_lift= 12.4 cm  ended: env_success
+seed 1030: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1031: success  steps= 28  max_lift= 12.0 cm  ended: env_success
+seed 1032: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1033: success  steps= 22  max_lift= 12.0 cm  ended: env_success
+seed 1034: success  steps= 20  max_lift= 11.4 cm  ended: env_success
+seed 1035: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1036: success  steps= 21  max_lift= 12.1 cm  ended: env_success
+seed 1037: success  steps= 22  max_lift= 12.2 cm  ended: env_success
+seed 1038: FAIL     steps=100  max_lift=  0.5 cm  ended: timeout
+seed 1039: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1040: success  steps= 19  max_lift= 12.2 cm  ended: env_success
+seed 1041: success  steps= 26  max_lift= 10.4 cm  ended: env_success
+seed 1042: success  steps= 24  max_lift= 10.3 cm  ended: env_success
+seed 1043: success  steps= 24  max_lift= 12.0 cm  ended: env_success
+seed 1044: success  steps= 26  max_lift= 12.4 cm  ended: env_success
+seed 1045: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1046: success  steps= 28  max_lift= 11.6 cm  ended: env_success
+seed 1047: success  steps= 23  max_lift= 12.0 cm  ended: env_success
+seed 1048: success  steps= 20  max_lift= 10.0 cm  ended: env_success
+seed 1049: success  steps= 23  max_lift= 12.2 cm  ended: env_success
+
+smolvla30k_020000: 44/50 reached 5 cm = 88%  (95% CI 76% to 94%)
+  environment's own 10 cm rule: 44/50
+  cube lifted at all (over 2 cm): 44/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+[Tue Oct 13 04:03:16 AM EDT 2026] evaluating 025000
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6519.79it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1001: success  steps= 24  max_lift= 10.1 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.4 cm  ended: timeout
+seed 1003: success  steps= 21  max_lift= 12.1 cm  ended: env_success
+seed 1004: success  steps= 28  max_lift= 12.4 cm  ended: env_success
+seed 1005: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1006: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1008: success  steps= 23  max_lift= 12.2 cm  ended: env_success
+seed 1009: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1010: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 12.3 cm  ended: env_success
+seed 1012: success  steps= 27  max_lift= 10.0 cm  ended: env_success
+seed 1013: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1014: success  steps= 24  max_lift= 10.0 cm  ended: env_success
+seed 1015: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1016: success  steps= 21  max_lift= 12.5 cm  ended: env_success
+seed 1017: success  steps= 28  max_lift= 12.1 cm  ended: env_success
+seed 1018: success  steps= 26  max_lift= 10.2 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1020: success  steps= 22  max_lift= 12.2 cm  ended: env_success
+seed 1021: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1022: success  steps= 26  max_lift= 12.1 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1024: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1025: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1026: success  steps= 22  max_lift= 10.1 cm  ended: env_success
+seed 1027: success  steps= 24  max_lift= 12.3 cm  ended: env_success
+seed 1028: success  steps= 22  max_lift= 12.0 cm  ended: env_success
+seed 1029: success  steps= 26  max_lift= 10.1 cm  ended: env_success
+seed 1030: success  steps= 23  max_lift= 12.5 cm  ended: env_success
+seed 1031: success  steps= 28  max_lift= 12.2 cm  ended: env_success
+seed 1032: FAIL     steps=100  max_lift=  0.6 cm  ended: timeout
+seed 1033: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1034: success  steps= 21  max_lift= 11.9 cm  ended: env_success
+seed 1035: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1036: success  steps= 21  max_lift= 12.4 cm  ended: env_success
+seed 1037: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1038: success  steps= 25  max_lift= 12.3 cm  ended: env_success
+seed 1039: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1040: success  steps= 19  max_lift= 12.5 cm  ended: env_success
+seed 1041: success  steps= 26  max_lift= 10.9 cm  ended: env_success
+seed 1042: success  steps= 24  max_lift= 10.4 cm  ended: env_success
+seed 1043: success  steps= 23  max_lift= 10.1 cm  ended: env_success
+seed 1044: success  steps= 25  max_lift= 10.1 cm  ended: env_success
+seed 1045: success  steps= 21  max_lift= 12.5 cm  ended: env_success
+seed 1046: success  steps= 28  max_lift= 11.7 cm  ended: env_success
+seed 1047: success  steps= 24  max_lift= 12.2 cm  ended: env_success
+seed 1048: success  steps= 20  max_lift= 10.1 cm  ended: env_success
+seed 1049: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+
+smolvla30k_025000: 47/50 reached 5 cm = 94%  (95% CI 84% to 98%)
+  environment's own 10 cm rule: 47/50
+  cube lifted at all (over 2 cm): 47/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+[Tue Oct 13 04:04:27 AM EDT 2026] evaluating 030000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 6362.69it/s]
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/shreyas/miniconda3/envs/vla/lib/python3.12/site-packages/gymnasium/spaces/box.py:364: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+seed 1000: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1001: success  steps= 24  max_lift= 10.1 cm  ended: env_success
+seed 1002: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1003: success  steps= 21  max_lift= 12.2 cm  ended: env_success
+seed 1004: success  steps= 28  max_lift= 12.4 cm  ended: env_success
+seed 1005: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1006: success  steps= 21  max_lift= 10.0 cm  ended: env_success
+seed 1007: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1008: success  steps= 24  max_lift= 12.2 cm  ended: env_success
+seed 1009: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1010: success  steps= 23  max_lift= 12.4 cm  ended: env_success
+seed 1011: success  steps= 21  max_lift= 12.4 cm  ended: env_success
+seed 1012: success  steps= 27  max_lift= 10.1 cm  ended: env_success
+seed 1013: success  steps= 25  max_lift= 12.5 cm  ended: env_success
+seed 1014: success  steps= 24  max_lift= 10.0 cm  ended: env_success
+seed 1015: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1016: success  steps= 20  max_lift= 10.0 cm  ended: env_success
+seed 1017: success  steps= 28  max_lift= 12.2 cm  ended: env_success
+seed 1018: success  steps= 25  max_lift= 10.1 cm  ended: env_success
+seed 1019: success  steps= 25  max_lift= 12.5 cm  ended: env_success
+seed 1020: success  steps= 22  max_lift= 12.3 cm  ended: env_success
+seed 1021: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1022: success  steps= 27  max_lift= 12.2 cm  ended: env_success
+seed 1023: success  steps= 21  max_lift= 12.4 cm  ended: env_success
+seed 1024: success  steps= 25  max_lift= 12.4 cm  ended: env_success
+seed 1025: FAIL     steps=100  max_lift=  0.3 cm  ended: timeout
+seed 1026: success  steps= 22  max_lift= 10.1 cm  ended: env_success
+seed 1027: success  steps= 24  max_lift= 12.3 cm  ended: env_success
+seed 1028: success  steps= 22  max_lift= 12.2 cm  ended: env_success
+seed 1029: success  steps= 27  max_lift= 10.1 cm  ended: env_success
+seed 1030: success  steps= 22  max_lift= 10.0 cm  ended: env_success
+seed 1031: success  steps= 28  max_lift= 12.3 cm  ended: env_success
+seed 1032: FAIL     steps=100  max_lift=  0.1 cm  ended: timeout
+seed 1033: success  steps= 22  max_lift= 10.4 cm  ended: env_success
+seed 1034: success  steps= 20  max_lift= 12.1 cm  ended: env_success
+seed 1035: FAIL     steps=100  max_lift=  0.0 cm  ended: timeout
+seed 1036: success  steps= 21  max_lift= 12.4 cm  ended: env_success
+seed 1037: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1038: success  steps= 25  max_lift= 12.3 cm  ended: env_success
+seed 1039: success  steps= 22  max_lift= 12.4 cm  ended: env_success
+seed 1040: success  steps= 19  max_lift= 12.4 cm  ended: env_success
+seed 1041: success  steps= 30  max_lift= 11.8 cm  ended: env_success
+seed 1042: success  steps= 24  max_lift= 10.4 cm  ended: env_success
+seed 1043: success  steps= 23  max_lift= 10.1 cm  ended: env_success
+seed 1044: success  steps= 25  max_lift= 10.1 cm  ended: env_success
+seed 1045: success  steps= 20  max_lift= 10.0 cm  ended: env_success
+seed 1046: success  steps= 28  max_lift= 12.2 cm  ended: env_success
+seed 1047: success  steps= 23  max_lift= 12.3 cm  ended: env_success
+seed 1048: success  steps= 21  max_lift= 10.1 cm  ended: env_success
+seed 1049: success  steps= 22  max_lift= 10.0 cm  ended: env_success
+
+smolvla30k_030000: 46/50 reached 5 cm = 92%  (95% CI 81% to 97%)
+  environment's own 10 cm rule: 46/50
+  cube lifted at all (over 2 cm): 46/50
+  episodes ended by cube leaving the table patch: 0/50
+results in eval_results/
+
+SmolVLA 30k run, success over 5 cm on seeds 1000-1049
+step     success   rate   95% CI
+  5000   41/50     82%   69% to 90%
+ 10000   38/50     76%   63% to 86%
+ 15000   43/50     86%   74% to 93%
+ 20000   44/50     88%   76% to 94%
+ 25000   47/50     94%   84% to 98%
+ 30000   46/50     92%   81% to 97%
+[Tue Oct 13 04:05:45 AM EDT 2026] all done

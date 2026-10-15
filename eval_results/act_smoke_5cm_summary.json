@@ -1,0 +1,33 @@
+{
+  "name": "act_smoke_5cm",
+  "episodes": 50,
+  "success_threshold_cm": 5.0,
+  "success_over_5.0cm": {
+    "count": 13,
+    "rate": 0.26,
+    "ci95": [
+      0.159,
+      0.396
+    ]
+  },
+  "env_success_over_10cm": {
+    "count": 11,
+    "rate": 0.22,
+    "ci95": [
+      0.128,
+      0.352
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 13,
+    "rate": 0.26,
+    "ci95": [
+      0.159,
+      0.396
+    ]
+  },
+  "ended_out_of_bounds": 2,
+  "mean_step_when_threshold_reached": 22.4,
+  "first_seed": 1000,
+  "max_steps": 100
+}

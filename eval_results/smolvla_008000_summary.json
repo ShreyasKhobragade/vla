@@ -1,0 +1,33 @@
+{
+  "name": "smolvla_008000",
+  "episodes": 50,
+  "success_threshold_cm": 5.0,
+  "success_over_5.0cm": {
+    "count": 39,
+    "rate": 0.78,
+    "ci95": [
+      0.648,
+      0.872
+    ]
+  },
+  "env_success_over_10cm": {
+    "count": 39,
+    "rate": 0.78,
+    "ci95": [
+      0.648,
+      0.872
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 39,
+    "rate": 0.78,
+    "ci95": [
+      0.648,
+      0.872
+    ]
+  },
+  "ended_out_of_bounds": 0,
+  "mean_step_when_threshold_reached": 21.3,
+  "first_seed": 1000,
+  "max_steps": 100
+}

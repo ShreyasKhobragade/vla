@@ -1,0 +1,4 @@
+seed,success,env_success,end_reason,max_lift_cm,first_step_over_threshold,steps,final_block_z
+1000,0,0,timeout,0.0,,100,0.0199
+1001,1,1,env_success,11.5,24,26,0.1354
+1002,0,0,timeout,0.5,,100,0.0199

@@ -1,0 +1,13 @@
+{
+  "name": "act_smoke",
+  "episodes": 50,
+  "successes": 11,
+  "success_rate": 0.22,
+  "ci95": [
+    0.128,
+    0.352
+  ],
+  "mean_steps_when_successful": 30.0,
+  "first_seed": 1000,
+  "max_steps": 100
+}

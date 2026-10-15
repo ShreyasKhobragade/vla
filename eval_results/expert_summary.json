@@ -1,0 +1,13 @@
+{
+  "name": "expert",
+  "episodes": 20,
+  "successes": 20,
+  "success_rate": 1.0,
+  "ci95": [
+    0.839,
+    1.0
+  ],
+  "mean_steps_when_successful": 23.0,
+  "first_seed": 1000,
+  "max_steps": 100
+}

@@ -1,0 +1,33 @@
+{
+  "name": "actv2_010000",
+  "episodes": 50,
+  "success_threshold_cm": 5.0,
+  "success_over_5.0cm": {
+    "count": 47,
+    "rate": 0.94,
+    "ci95": [
+      0.838,
+      0.979
+    ]
+  },
+  "env_success_over_10cm": {
+    "count": 47,
+    "rate": 0.94,
+    "ci95": [
+      0.838,
+      0.979
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 49,
+    "rate": 0.98,
+    "ci95": [
+      0.895,
+      0.996
+    ]
+  },
+  "ended_out_of_bounds": 1,
+  "mean_step_when_threshold_reached": 21.7,
+  "first_seed": 1000,
+  "max_steps": 100
+}

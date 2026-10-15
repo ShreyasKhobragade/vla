@@ -1,0 +1,6 @@
+# training checkpoints (~19 GB)
+outputs/
+# upstream LeRobot checkout, unmodified; see README for the commit
+lerobot/
+__pycache__/
+*.pyc

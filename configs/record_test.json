@@ -1,0 +1,27 @@
+{
+  "env": {
+    "name": "gym_hil",
+    "task": "PandaPickCubeKeyboard-v0",
+    "fps": 10,
+    "processor": {
+      "gripper": {
+        "use_gripper": true,
+        "gripper_penalty": -0.02
+      },
+      "reset": {
+        "control_time_s": 30.0,
+        "fixed_reset_joint_positions": [0.0, 0.195, 0.0, -2.43, 0.0, 2.62, 0.785]
+      }
+    }
+  },
+  "dataset": {
+    "repo_id": "local/franka_pick_cube_test",
+    "root": null,
+    "task": "pick_cube",
+    "num_episodes_to_record": 3,
+    "replay_episode": null,
+    "push_to_hub": false
+  },
+  "mode": "record",
+  "device": "cuda"
+}
