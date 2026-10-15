@@ -1,0 +1,26 @@
+{
+  "name": "pp_smolvla_015000",
+  "episodes": 50,
+  "env": "pick_place",
+  "task": "pick up the cube and place it on the yellow pad",
+  "success_placed": {
+    "count": 36,
+    "rate": 0.72,
+    "ci95": [
+      0.583,
+      0.825
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 39,
+    "rate": 0.78,
+    "ci95": [
+      0.648,
+      0.872
+    ]
+  },
+  "ended_out_of_bounds": 1,
+  "mean_step_when_threshold_reached": 54.2,
+  "first_seed": 1000,
+  "max_steps": 150
+}

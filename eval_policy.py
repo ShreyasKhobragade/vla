@@ -17,6 +17,9 @@ Examples (run from the folder containing scripted_expert.py):
       --checkpoint outputs/train/act_smoke/checkpoints/last/pretrained_model \
       --repo-id local/franka_expert_v1
 
+  # pick-and-place (pick_place_env.py): success is the environment's own place rule
+  python eval_policy.py --env pick_place --expert --episodes 20 --name pickplace_expert
+
 Results go to eval_results/<name>.csv, <name>_summary.json and a few <name>_*.gif rollouts.
 """
 import argparse
@@ -33,7 +36,17 @@ ENV_SUCCESS_LIFT = 0.10  # the environment's own success rule (metres)
 LIFTED_LIFT = 0.02       # "cube was clearly picked up at all" (metres)
 
 
-def make_pick_env(random_cube=True):
+TASK_DEFAULTS = {  # env -> (language instruction, max steps per episode)
+    "pick_cube": ("pick_cube", 100),
+    "pick_place": ("pick up the cube and place it on the yellow pad", 150),
+}
+
+
+def make_pick_env(random_cube=True, task_env="pick_cube"):
+    if task_env == "pick_place":
+        from pick_place_env import make_pick_place_env
+
+        return make_pick_place_env(image_obs=True, random_block_position=random_cube)
     return make_env(
         "gym_hil/PandaPickCubeBase-v0",
         use_viewer=False,
@@ -49,10 +62,10 @@ def make_pick_env(random_cube=True):
 class ExpertAgent:
     """The scripted expert, to check the harness itself."""
 
-    def __init__(self):
-        from scripted_expert import PickCubeExpert
+    def __init__(self, task_env="pick_cube"):
+        from scripted_expert import PickCubeExpert, PickPlaceExpert
 
-        self.expert = PickCubeExpert()
+        self.expert = PickPlaceExpert() if task_env == "pick_place" else PickCubeExpert()
 
     def reset(self, seed=None):
         self.expert.reset()
@@ -153,7 +166,9 @@ class SmolVLAAgent:
         return np.clip(action, ACTION_LOW, ACTION_HIGH)
 
 
-def run_episode(env, agent, seed, max_steps, keep_frames, success_lift):
+def run_episode(env, agent, seed, max_steps, keep_frames, success_lift, pick_place=False):
+    """One seeded episode. Pick-cube success: the cube rose success_lift above its start.
+    Pick-and-place success: the environment's place rule fired (see pick_place_env.py)."""
     np.random.seed(seed)  # gym_hil samples the cube with the global numpy RNG
     obs, _ = env.reset(seed=seed)
     agent.reset(seed)
@@ -168,11 +183,13 @@ def run_episode(env, agent, seed, max_steps, keep_frames, success_lift):
         obs, _, terminated, truncated, info = env.step(action)
         lift = float(u._data.sensor("block_pos").data[2]) - z_init
         max_lift = max(max_lift, lift)
-        if first_step is None and lift > success_lift:
+        if not pick_place and first_step is None and lift > success_lift:
             first_step = t + 1
         if terminated or truncated:
             env_success = bool(info.get("succeed", False))
             end_reason = "env_success" if env_success else "out_of_bounds"
+            if pick_place and env_success:
+                first_step = t + 1
             break
     block = u._data.sensor("block_pos").data
     row = {
@@ -185,6 +202,8 @@ def run_episode(env, agent, seed, max_steps, keep_frames, success_lift):
         "steps": t + 1,
         "final_block_z": round(float(block[2]), 4),
     }
+    if pick_place:
+        row["final_pad_offset_cm"] = round(100 * float(np.linalg.norm(block[:2] - u.pad_pos[:2])), 1)
     return row, frames
 
 
@@ -217,23 +236,29 @@ def main():
     ap.add_argument("--expert", action="store_true", help="evaluate the scripted expert instead of a checkpoint")
     ap.add_argument("--checkpoint", help="path to .../checkpoints/last/pretrained_model")
     ap.add_argument("--policy-type", choices=["act", "smolvla"], default="act")
-    ap.add_argument("--task", default="pick_cube", help="language instruction (SmolVLA only; must match training)")
+    ap.add_argument("--env", choices=list(TASK_DEFAULTS), default="pick_cube")
+    ap.add_argument("--task", default=None,
+                    help="language instruction (SmolVLA only; must match training; default depends on --env)")
     ap.add_argument("--repo-id", help="dataset the policy was trained on (ACT only, for normalization stats)")
     ap.add_argument("--root", default=None, help="dataset folder (default: LeRobot cache)")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--episodes", type=int, default=50)
     ap.add_argument("--seed", type=int, default=1000, help="first evaluation seed (training used small seeds)")
-    ap.add_argument("--max-steps", type=int, default=100)
+    ap.add_argument("--max-steps", type=int, default=None, help="default depends on --env")
     ap.add_argument("--success-lift", type=float, default=0.05,
                     help="metres the cube must rise to count as success (default 0.05; at most 0.10)")
     ap.add_argument("--videos", type=int, default=3, help="save GIFs of the first N episodes")
     ap.add_argument("--out-dir", default="eval_results")
     args = ap.parse_args()
+    default_task, default_steps = TASK_DEFAULTS[args.env]
+    args.task = args.task or default_task
+    args.max_steps = args.max_steps or default_steps
+    pick_place = args.env == "pick_place"
 
     if not 0 < args.success_lift <= ENV_SUCCESS_LIFT:
         ap.error("--success-lift must be above 0 and at most 0.10 (the environment ends episodes at 10 cm)")
     if args.expert:
-        agent = ExpertAgent()
+        agent = ExpertAgent(args.env)
     elif args.policy_type == "smolvla":
         if not args.checkpoint:
             ap.error("give --checkpoint (SmolVLA reads its normalization stats from the checkpoint)")
@@ -246,18 +271,19 @@ def main():
 
     out = Path(args.out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    env = make_pick_env(random_cube=True)
+    env = make_pick_env(random_cube=True, task_env=args.env)
 
     rows = []
     for i in range(args.episodes):
         seed = args.seed + i
         row, frames = run_episode(env, agent, seed, args.max_steps, keep_frames=i < args.videos,
-                                  success_lift=args.success_lift)
+                                  success_lift=args.success_lift, pick_place=pick_place)
         rows.append(row)
         if frames:
             save_gif(frames, out / f"{args.name}_seed{seed}_{'ok' if row['success'] else 'fail'}.gif")
         print(f"seed {seed}: {'success' if row['success'] else 'FAIL   '}  steps={row['steps']:3d}  "
-              f"max_lift={row['max_lift_cm']:5.1f} cm  ended: {row['end_reason']}", flush=True)
+              f"max_lift={row['max_lift_cm']:5.1f} cm  ended: {row['end_reason']}"
+              + (f"  pad_offset={row['final_pad_offset_cm']:4.1f} cm" if pick_place else ""), flush=True)
     env.close()
 
     n = len(rows)
@@ -266,12 +292,18 @@ def main():
     k_lifted = sum(r["max_lift_cm"] > 100 * LIFTED_LIFT for r in rows)
     k_oob = sum(r["end_reason"] == "out_of_bounds" for r in rows)
     ok_steps = [r["first_step_over_threshold"] for r in rows if r["success"]]
+    if pick_place:
+        head = {"env": args.env, "task": args.task, "success_placed": rate(k, n)}
+    else:
+        head = {
+            "success_threshold_cm": round(100 * args.success_lift, 1),
+            f"success_over_{round(100 * args.success_lift, 1)}cm": rate(k, n),
+            "env_success_over_10cm": rate(k_env, n),
+        }
     summary = {
         "name": args.name,
         "episodes": n,
-        "success_threshold_cm": round(100 * args.success_lift, 1),
-        f"success_over_{round(100 * args.success_lift, 1)}cm": rate(k, n),
-        "env_success_over_10cm": rate(k_env, n),
+        **head,
         f"lifted_over_{round(100 * LIFTED_LIFT, 1)}cm": rate(k_lifted, n),
         "ended_out_of_bounds": k_oob,
         "mean_step_when_threshold_reached": round(float(np.mean(ok_steps)), 1) if ok_steps else None,
@@ -286,9 +318,13 @@ def main():
         json.dump(summary, f, indent=2)
 
     lo, hi = wilson(k, n)
-    print(f"\n{args.name}: {k}/{n} reached {100 * args.success_lift:.0f} cm = {100 * k / n:.0f}%  "
-          f"(95% CI {100 * lo:.0f}% to {100 * hi:.0f}%)")
-    print(f"  environment's own 10 cm rule: {k_env}/{n}")
+    if pick_place:
+        print(f"\n{args.name}: {k}/{n} placed on the pad = {100 * k / n:.0f}%  "
+              f"(95% CI {100 * lo:.0f}% to {100 * hi:.0f}%)")
+    else:
+        print(f"\n{args.name}: {k}/{n} reached {100 * args.success_lift:.0f} cm = {100 * k / n:.0f}%  "
+              f"(95% CI {100 * lo:.0f}% to {100 * hi:.0f}%)")
+        print(f"  environment's own 10 cm rule: {k_env}/{n}")
     print(f"  cube lifted at all (over {100 * LIFTED_LIFT:.0f} cm): {k_lifted}/{n}")
     print(f"  episodes ended by cube leaving the table patch: {k_oob}/{n}")
     print(f"results in {out}/")

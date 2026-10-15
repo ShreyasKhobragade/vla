@@ -1,4 +1,4 @@
-"""Record scripted-expert demos for gym_hil Franka pick-cube as a LeRobotDataset.
+"""Record scripted-expert demos for gym_hil Franka pick-cube (or pick-and-place) as a LeRobotDataset.
 
 The dataset fields match what the keyboard teleop recorder (lerobot.rl.gym_manipulator)
 writes, so ACT / SmolVLA training commands work on it unchanged:
@@ -7,10 +7,13 @@ writes, so ACT / SmolVLA training commands work on it unchanged:
   action                                                (4,)  [dx, dy, dz, gripper]
   next.reward, next.done, complementary_info.discrete_penalty
 
-Only successful episodes are saved by default.
+Only successful episodes are saved by default. Each attempt seeds numpy's global RNG (which
+gym_hil uses to place the cube, and pick_place_env the pad) with --seed + attempt number, so the
+recorded positions are reproducible. Keep --seed far from the evaluation seeds (1000-1049).
 
 Usage (run from the folder that contains scripted_expert.py):
   python record_expert.py --repo-id local/franka_expert_v1 --episodes 50
+  python record_expert.py --env pick_place --repo-id local/franka_pickplace_v1 --episodes 500
 """
 import argparse
 import sys
@@ -22,9 +25,14 @@ from gym_hil import make_env
 from lerobot.datasets import LeRobotDataset
 from lerobot.utils.constants import ACTION, DONE, OBS_IMAGES, OBS_STATE, REWARD
 
-from scripted_expert import PickCubeExpert
+from pick_place_env import make_pick_place_env
+from scripted_expert import PickCubeExpert, PickPlaceExpert
 
 PENALTY_KEY = "complementary_info.discrete_penalty"
+TASK_DEFAULTS = {  # env -> (language instruction, max steps per episode)
+    "pick_cube": ("pick_cube", 100),
+    "pick_place": ("pick up the cube and place it on the yellow pad", 150),
+}
 
 
 def default_root(repo_id: str) -> Path:
@@ -59,29 +67,37 @@ def main():
     ap.add_argument("--repo-id", required=True, help="e.g. local/franka_expert_v1 (must be new)")
     ap.add_argument("--episodes", type=int, default=50)
     ap.add_argument("--root", default=None, help="dataset folder (default: LeRobot cache)")
-    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--env", choices=list(TASK_DEFAULTS), default="pick_cube")
+    ap.add_argument("--seed", type=int, default=100000, help="seed of the first attempt (keep away from eval seeds)")
     ap.add_argument("--noise", type=float, default=0.0, help="action noise during approach, e.g. 0.1")
     ap.add_argument("--fixed-cube", action="store_true", help="cube always at the default spot")
-    ap.add_argument("--task", default="pick_cube")
+    ap.add_argument("--task", default=None, help="language instruction (default depends on --env)")
     ap.add_argument("--fps", type=int, default=10)
-    ap.add_argument("--max-steps", type=int, default=100)
+    ap.add_argument("--max-steps", type=int, default=None, help="default depends on --env")
     args = ap.parse_args()
+    default_task, default_steps = TASK_DEFAULTS[args.env]
+    args.task = args.task or default_task
+    args.max_steps = args.max_steps or default_steps
 
     root = Path(args.root) if args.root else default_root(args.repo_id)
     if root.exists():
         sys.exit(f"{root} already exists. Choose a new --repo-id (or --root), or delete that folder.")
 
-    env = make_env(
-        "gym_hil/PandaPickCubeBase-v0",
-        use_viewer=False,
-        use_inputs_control=False,
-        reset_delay_seconds=0.0,
-        gripper_penalty=-0.02,
-        render_mode="rgb_array",
-        image_obs=True,
-        random_block_position=not args.fixed_cube,
-    )
-    expert = PickCubeExpert(noise=args.noise, rng=np.random.default_rng(args.seed))
+    if args.env == "pick_place":
+        env = make_pick_place_env(image_obs=True, random_block_position=not args.fixed_cube)
+        expert = PickPlaceExpert(noise=args.noise, rng=np.random.default_rng(args.seed))
+    else:
+        env = make_env(
+            "gym_hil/PandaPickCubeBase-v0",
+            use_viewer=False,
+            use_inputs_control=False,
+            reset_delay_seconds=0.0,
+            gripper_penalty=-0.02,
+            render_mode="rgb_array",
+            image_obs=True,
+            random_block_position=not args.fixed_cube,
+        )
+        expert = PickCubeExpert(noise=args.noise, rng=np.random.default_rng(args.seed))
 
     obs, _ = env.reset(seed=args.seed)
     h, w, _ = obs["pixels"]["front"].shape
@@ -109,6 +125,7 @@ def main():
     max_attempts = args.episodes * 3
     try:
         while saved < args.episodes and attempts < max_attempts:
+            np.random.seed(args.seed + attempts)
             obs, _ = env.reset(seed=args.seed + attempts)
             expert.reset()
             attempts += 1

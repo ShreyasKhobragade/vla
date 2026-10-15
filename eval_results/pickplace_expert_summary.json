@@ -1,0 +1,26 @@
+{
+  "name": "pickplace_expert",
+  "episodes": 50,
+  "env": "pick_place",
+  "task": "pick up the cube and place it on the yellow pad",
+  "success_placed": {
+    "count": 50,
+    "rate": 1.0,
+    "ci95": [
+      0.929,
+      1.0
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 50,
+    "rate": 1.0,
+    "ci95": [
+      0.929,
+      1.0
+    ]
+  },
+  "ended_out_of_bounds": 0,
+  "mean_step_when_threshold_reached": 42.7,
+  "first_seed": 1000,
+  "max_steps": 150
+}

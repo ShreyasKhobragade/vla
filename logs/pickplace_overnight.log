@@ -1,0 +1,694 @@
+[2026-10-15 03:18:05] waiting for demo recording to finish
+[2026-10-15 03:19:05] dataset ok: 500 episodes
+[2026-10-15 03:19:05] training ACT -> outputs/train/act_pickplace_30k
+[2026-10-15 03:43:35] ACT training finished
+[2026-10-15 03:43:55] evaluating ACT 005000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=13.5 cm
+seed 1001: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=15.4 cm
+seed 1002: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=16.7 cm
+seed 1003: FAIL     steps=150  max_lift=  6.4 cm  ended: timeout  pad_offset= 2.8 cm
+seed 1004: FAIL     steps=150  max_lift=  4.7 cm  ended: timeout  pad_offset= 9.9 cm
+seed 1005: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=24.3 cm
+seed 1006: success  steps= 46  max_lift=  5.2 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1007: FAIL     steps=150  max_lift=  1.3 cm  ended: timeout  pad_offset=17.3 cm
+seed 1008: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=11.6 cm
+seed 1009: FAIL     steps=150  max_lift=  6.6 cm  ended: timeout  pad_offset= 5.4 cm
+seed 1010: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=16.4 cm
+seed 1011: FAIL     steps=150  max_lift=  6.9 cm  ended: timeout  pad_offset= 6.0 cm
+seed 1012: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.0 cm
+seed 1013: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=27.8 cm
+seed 1014: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=16.9 cm
+seed 1015: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=15.5 cm
+seed 1016: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=12.4 cm
+seed 1017: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=11.8 cm
+seed 1018: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=19.2 cm
+seed 1019: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=21.2 cm
+seed 1020: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.5 cm
+seed 1021: success  steps= 71  max_lift=  8.7 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1022: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=24.4 cm
+seed 1023: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.7 cm
+seed 1024: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=13.2 cm
+seed 1025: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1026: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=23.0 cm
+seed 1027: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=22.8 cm
+seed 1028: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=15.3 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.3 cm
+seed 1030: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=16.2 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.1 cm
+seed 1032: FAIL     steps=150  max_lift=  6.2 cm  ended: timeout  pad_offset= 3.0 cm
+seed 1033: success  steps= 45  max_lift=  8.1 cm  ended: env_success  pad_offset= 0.5 cm
+seed 1034: success  steps= 60  max_lift=  7.1 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: FAIL     steps=150  max_lift=  7.9 cm  ended: timeout  pad_offset= 2.4 cm
+seed 1037: FAIL     steps=150  max_lift=  8.4 cm  ended: timeout  pad_offset= 2.6 cm
+seed 1038: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=28.1 cm
+seed 1039: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=14.9 cm
+seed 1040: FAIL     steps=150  max_lift=  7.3 cm  ended: timeout  pad_offset= 5.9 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.9 cm
+seed 1042: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=11.0 cm
+seed 1043: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=10.2 cm
+seed 1044: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=14.2 cm
+seed 1045: FAIL     steps=150  max_lift=  7.8 cm  ended: timeout  pad_offset= 4.5 cm
+seed 1046: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=23.2 cm
+seed 1047: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=16.2 cm
+seed 1048: FAIL     steps=150  max_lift=  7.8 cm  ended: timeout  pad_offset= 9.3 cm
+seed 1049: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=16.3 cm
+pp_act_005000: 5/50 placed on the pad = 10%  (95% CI 4% to 21%)
+  cube lifted at all (over 2 cm): 15/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 03:47:15] evaluating ACT 010000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 44  max_lift=  7.6 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1001: FAIL     steps=150  max_lift=  7.2 cm  ended: timeout  pad_offset= 4.6 cm
+seed 1002: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=17.9 cm
+seed 1003: success  steps= 41  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1004: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=14.7 cm
+seed 1005: success  steps= 50  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1006: success  steps= 69  max_lift=  7.3 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1007: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.7 cm
+seed 1008: success  steps= 63  max_lift=  6.1 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1009: success  steps=142  max_lift=  8.0 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1010: FAIL     steps=150  max_lift=  8.8 cm  ended: timeout  pad_offset= 5.0 cm
+seed 1011: success  steps= 46  max_lift=  8.2 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1012: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=14.4 cm
+seed 1013: FAIL     steps=150  max_lift=  7.5 cm  ended: timeout  pad_offset= 4.2 cm
+seed 1014: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=18.6 cm
+seed 1015: success  steps= 47  max_lift=  8.0 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1016: FAIL     steps=150  max_lift=  7.1 cm  ended: timeout  pad_offset= 3.8 cm
+seed 1017: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=14.1 cm
+seed 1018: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=18.6 cm
+seed 1019: success  steps= 46  max_lift=  9.4 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1020: FAIL     steps=150  max_lift=  8.0 cm  ended: timeout  pad_offset= 5.1 cm
+seed 1021: success  steps= 46  max_lift=  8.6 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1022: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=24.7 cm
+seed 1023: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.3 cm
+seed 1024: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=11.6 cm
+seed 1025: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.0 cm
+seed 1026: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=21.3 cm
+seed 1027: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=21.3 cm
+seed 1028: success  steps= 72  max_lift=  9.4 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1029: FAIL     steps=150  max_lift=  6.7 cm  ended: timeout  pad_offset= 7.4 cm
+seed 1030: success  steps= 49  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1031: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=25.9 cm
+seed 1032: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=15.7 cm
+seed 1033: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.7 cm
+seed 1034: success  steps= 53  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1035: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=14.2 cm
+seed 1036: success  steps= 43  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1037: success  steps= 43  max_lift=  8.4 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1038: success  steps= 50  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1039: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=16.4 cm
+seed 1040: success  steps= 54  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1041: FAIL     steps= 23  max_lift=  1.2 cm  ended: out_of_bounds  pad_offset=17.6 cm
+seed 1042: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=13.8 cm
+seed 1043: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=10.2 cm
+seed 1044: FAIL     steps=150  max_lift=  5.9 cm  ended: timeout  pad_offset= 9.2 cm
+seed 1045: success  steps= 64  max_lift=  8.0 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1046: success  steps= 63  max_lift=  6.7 cm  ended: env_success  pad_offset= 3.2 cm
+seed 1047: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.5 cm
+seed 1048: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=11.2 cm
+seed 1049: FAIL     steps=150  max_lift=  1.1 cm  ended: timeout  pad_offset=19.6 cm
+pp_act_010000: 20/50 placed on the pad = 40%  (95% CI 28% to 54%)
+  cube lifted at all (over 2 cm): 27/50
+  episodes ended by cube leaving the table patch: 1/50
+[2026-10-15 03:49:53] evaluating ACT 015000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: FAIL     steps=150  max_lift=  7.4 cm  ended: timeout  pad_offset= 2.6 cm
+seed 1001: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=10.4 cm
+seed 1002: FAIL     steps=150  max_lift=  7.7 cm  ended: timeout  pad_offset=11.6 cm
+seed 1003: success  steps= 72  max_lift=  7.0 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1004: FAIL     steps=150  max_lift=  0.5 cm  ended: timeout  pad_offset=14.6 cm
+seed 1005: success  steps= 51  max_lift=  7.1 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1006: success  steps= 46  max_lift=  7.0 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1007: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=11.1 cm
+seed 1008: FAIL     steps=150  max_lift= 12.3 cm  ended: timeout  pad_offset= 2.3 cm
+seed 1009: success  steps= 44  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1010: success  steps= 61  max_lift=  8.8 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1011: success  steps= 40  max_lift=  7.7 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1012: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.1 cm
+seed 1013: FAIL     steps=150  max_lift=  7.2 cm  ended: timeout  pad_offset= 4.8 cm
+seed 1014: success  steps= 79  max_lift=  7.6 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1015: success  steps= 42  max_lift=  8.4 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1016: success  steps= 90  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1017: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=16.0 cm
+seed 1018: FAIL     steps=150  max_lift=  4.2 cm  ended: timeout  pad_offset=14.5 cm
+seed 1019: FAIL     steps=150  max_lift=  9.1 cm  ended: timeout  pad_offset= 2.3 cm
+seed 1020: FAIL     steps=133  max_lift=  8.0 cm  ended: out_of_bounds  pad_offset= 7.5 cm
+seed 1021: success  steps= 46  max_lift=  8.3 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1022: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=23.6 cm
+seed 1023: success  steps= 53  max_lift=  7.9 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1024: FAIL     steps=150  max_lift=  9.6 cm  ended: timeout  pad_offset= 1.6 cm
+seed 1025: success  steps=134  max_lift=  8.3 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1026: success  steps= 67  max_lift=  6.6 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1027: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=22.2 cm
+seed 1028: FAIL     steps=150  max_lift=  6.6 cm  ended: timeout  pad_offset= 7.0 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.3 cm
+seed 1030: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=15.3 cm
+seed 1031: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=25.2 cm
+seed 1032: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.6 cm
+seed 1033: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.7 cm
+seed 1034: success  steps= 82  max_lift=  7.6 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1035: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=14.3 cm
+seed 1036: FAIL     steps=150  max_lift=  9.0 cm  ended: timeout  pad_offset= 2.3 cm
+seed 1037: success  steps=126  max_lift=  8.5 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1038: FAIL     steps=150  max_lift=  9.0 cm  ended: timeout  pad_offset= 2.2 cm
+seed 1039: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=14.5 cm
+seed 1040: success  steps=105  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=16.1 cm
+seed 1042: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset= 9.9 cm
+seed 1043: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=10.3 cm
+seed 1044: success  steps= 57  max_lift=  4.9 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1045: success  steps=109  max_lift=  8.6 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1046: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=23.0 cm
+seed 1047: success  steps= 46  max_lift=  8.5 cm  ended: env_success  pad_offset= 0.3 cm
+seed 1048: success  steps= 39  max_lift=  6.8 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1049: FAIL     steps=150  max_lift=  9.2 cm  ended: timeout  pad_offset= 1.8 cm
+pp_act_015000: 20/50 placed on the pad = 40%  (95% CI 28% to 54%)
+  cube lifted at all (over 2 cm): 32/50
+  episodes ended by cube leaving the table patch: 1/50
+[2026-10-15 03:52:42] evaluating ACT 020000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: FAIL     steps=150  max_lift=  3.8 cm  ended: timeout  pad_offset=10.1 cm
+seed 1001: FAIL     steps=150  max_lift=  1.3 cm  ended: timeout  pad_offset= 5.1 cm
+seed 1002: FAIL     steps=150  max_lift=  4.5 cm  ended: timeout  pad_offset=10.0 cm
+seed 1003: success  steps= 51  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1004: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=15.1 cm
+seed 1005: FAIL     steps=150  max_lift=  6.8 cm  ended: timeout  pad_offset= 7.0 cm
+seed 1006: FAIL     steps=150  max_lift=  7.6 cm  ended: timeout  pad_offset= 3.4 cm
+seed 1007: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=11.6 cm
+seed 1008: success  steps= 52  max_lift=  6.9 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1009: success  steps= 43  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1010: FAIL     steps=150  max_lift=  6.7 cm  ended: timeout  pad_offset= 2.7 cm
+seed 1011: success  steps= 41  max_lift=  7.9 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1012: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.9 cm
+seed 1013: FAIL     steps=150  max_lift=  6.3 cm  ended: timeout  pad_offset= 3.5 cm
+seed 1014: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=17.7 cm
+seed 1015: success  steps= 71  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1016: FAIL     steps=150  max_lift=  6.7 cm  ended: timeout  pad_offset= 2.7 cm
+seed 1017: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=14.5 cm
+seed 1018: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=19.0 cm
+seed 1019: success  steps=141  max_lift=  6.9 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1020: success  steps= 48  max_lift=  5.7 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1021: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1022: FAIL     steps=150  max_lift=  1.3 cm  ended: timeout  pad_offset=23.5 cm
+seed 1023: success  steps= 57  max_lift=  7.7 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1024: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1025: FAIL     steps=150  max_lift= 10.7 cm  ended: timeout  pad_offset= 6.6 cm
+seed 1026: success  steps= 85  max_lift=  6.6 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1027: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=20.3 cm
+seed 1028: FAIL     steps=150  max_lift=  5.4 cm  ended: timeout  pad_offset= 8.0 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.3 cm
+seed 1030: success  steps= 64  max_lift=  8.6 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=25.4 cm
+seed 1032: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=13.7 cm
+seed 1033: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.7 cm
+seed 1034: success  steps= 59  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1035: FAIL     steps=150  max_lift=  1.1 cm  ended: timeout  pad_offset=14.2 cm
+seed 1036: FAIL     steps=150  max_lift=  7.7 cm  ended: timeout  pad_offset= 4.7 cm
+seed 1037: success  steps= 45  max_lift=  8.7 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1038: success  steps= 51  max_lift=  7.9 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1039: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=14.2 cm
+seed 1040: success  steps= 65  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1041: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=16.3 cm
+seed 1042: success  steps= 93  max_lift=  3.7 cm  ended: env_success  pad_offset= 3.0 cm
+seed 1043: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset= 8.3 cm
+seed 1044: success  steps= 51  max_lift=  5.7 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1045: success  steps= 47  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1046: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=23.2 cm
+seed 1047: success  steps= 45  max_lift=  8.3 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1048: FAIL     steps=150  max_lift=  6.0 cm  ended: timeout  pad_offset= 4.6 cm
+seed 1049: success  steps= 46  max_lift=  8.4 cm  ended: env_success  pad_offset= 2.6 cm
+pp_act_020000: 21/50 placed on the pad = 42%  (95% CI 29% to 56%)
+  cube lifted at all (over 2 cm): 32/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 03:55:24] evaluating ACT 025000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 61  max_lift=  5.6 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1001: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset= 4.3 cm
+seed 1002: FAIL     steps=150  max_lift=  5.0 cm  ended: timeout  pad_offset= 4.5 cm
+seed 1003: success  steps=134  max_lift=  5.2 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1004: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.4 cm
+seed 1005: success  steps= 80  max_lift=  4.9 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1006: success  steps= 45  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1007: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.1 cm
+seed 1008: FAIL     steps=150  max_lift=  7.6 cm  ended: timeout  pad_offset= 1.5 cm
+seed 1009: success  steps= 44  max_lift=  8.0 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1010: success  steps= 45  max_lift=  6.6 cm  ended: env_success  pad_offset= 0.3 cm
+seed 1011: success  steps= 43  max_lift=  7.9 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1012: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=15.6 cm
+seed 1013: FAIL     steps= 37  max_lift=  5.7 cm  ended: out_of_bounds  pad_offset=11.0 cm
+seed 1014: success  steps= 63  max_lift=  7.0 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1015: success  steps= 51  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1016: success  steps= 40  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1017: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=15.3 cm
+seed 1018: success  steps= 48  max_lift=  6.3 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1019: FAIL     steps=150  max_lift=  5.7 cm  ended: timeout  pad_offset= 1.2 cm
+seed 1020: FAIL     steps=150  max_lift=  7.3 cm  ended: timeout  pad_offset= 3.4 cm
+seed 1021: success  steps= 44  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1022: FAIL     steps=150  max_lift=  8.8 cm  ended: timeout  pad_offset= 3.3 cm
+seed 1023: success  steps= 42  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1024: success  steps= 51  max_lift=  7.7 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1025: success  steps= 60  max_lift=  7.1 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1026: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1027: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=21.8 cm
+seed 1028: FAIL     steps=150  max_lift=  6.6 cm  ended: timeout  pad_offset= 2.8 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=17.8 cm
+seed 1030: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=16.0 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=25.7 cm
+seed 1032: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=10.0 cm
+seed 1033: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.7 cm
+seed 1034: FAIL     steps=150  max_lift=  7.5 cm  ended: timeout  pad_offset= 3.1 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.9 cm
+seed 1036: success  steps=116  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.5 cm
+seed 1037: success  steps=130  max_lift=  9.6 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1038: success  steps= 44  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1039: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=14.8 cm
+seed 1040: success  steps= 71  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1041: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=15.0 cm
+seed 1042: success  steps= 42  max_lift=  5.1 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1043: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=10.9 cm
+seed 1044: success  steps= 44  max_lift=  7.7 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1045: success  steps= 49  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1046: FAIL     steps=150  max_lift=  4.2 cm  ended: timeout  pad_offset= 5.8 cm
+seed 1047: success  steps= 84  max_lift= 10.8 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1048: success  steps= 43  max_lift=  7.7 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1049: success  steps= 47  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.2 cm
+pp_act_025000: 26/50 placed on the pad = 52%  (95% CI 39% to 65%)
+  cube lifted at all (over 2 cm): 35/50
+  episodes ended by cube leaving the table patch: 1/50
+[2026-10-15 03:57:50] evaluating ACT 030000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 51  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1001: FAIL     steps=150  max_lift=  6.9 cm  ended: timeout  pad_offset= 4.8 cm
+seed 1002: FAIL     steps=150  max_lift=  5.3 cm  ended: timeout  pad_offset=12.2 cm
+seed 1003: FAIL     steps=150  max_lift=  5.0 cm  ended: timeout  pad_offset= 2.8 cm
+seed 1004: FAIL     steps=150  max_lift=  3.7 cm  ended: timeout  pad_offset=10.5 cm
+seed 1005: success  steps= 44  max_lift=  6.5 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1006: success  steps= 53  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1007: FAIL     steps=150  max_lift=  9.6 cm  ended: timeout  pad_offset= 5.1 cm
+seed 1008: success  steps= 45  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1009: success  steps= 44  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1010: FAIL     steps=150  max_lift=  9.0 cm  ended: timeout  pad_offset= 4.0 cm
+seed 1011: success  steps= 43  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1012: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=14.2 cm
+seed 1013: FAIL     steps=150  max_lift=  6.9 cm  ended: timeout  pad_offset= 3.8 cm
+seed 1014: FAIL     steps=150  max_lift=  7.7 cm  ended: timeout  pad_offset= 3.1 cm
+seed 1015: FAIL     steps=150  max_lift=  7.5 cm  ended: timeout  pad_offset= 7.0 cm
+seed 1016: FAIL     steps=150  max_lift=  7.8 cm  ended: timeout  pad_offset= 1.9 cm
+seed 1017: FAIL     steps= 76  max_lift=  0.3 cm  ended: out_of_bounds  pad_offset=15.9 cm
+seed 1018: FAIL     steps=150  max_lift=  6.9 cm  ended: timeout  pad_offset=13.1 cm
+seed 1019: success  steps= 61  max_lift=  7.9 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1020: success  steps= 67  max_lift=  9.3 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1021: success  steps= 45  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1022: FAIL     steps=150  max_lift=  4.2 cm  ended: timeout  pad_offset= 5.8 cm
+seed 1023: success  steps= 44  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1024: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=10.7 cm
+seed 1025: FAIL     steps=150  max_lift=  7.4 cm  ended: timeout  pad_offset= 3.8 cm
+seed 1026: success  steps=134  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1027: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=22.7 cm
+seed 1028: success  steps= 50  max_lift=  8.8 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=17.5 cm
+seed 1030: success  steps=126  max_lift=  5.7 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1031: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=25.2 cm
+seed 1032: FAIL     steps=150  max_lift=  6.4 cm  ended: timeout  pad_offset= 1.8 cm
+seed 1033: success  steps= 73  max_lift=  5.1 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1034: success  steps= 59  max_lift=  7.6 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1035: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=13.9 cm
+seed 1036: FAIL     steps=150  max_lift=  7.8 cm  ended: timeout  pad_offset= 5.5 cm
+seed 1037: success  steps= 44  max_lift=  7.6 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1038: success  steps= 50  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.5 cm
+seed 1039: success  steps= 41  max_lift=  6.3 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1040: success  steps= 81  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1041: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=15.0 cm
+seed 1042: success  steps= 82  max_lift=  4.1 cm  ended: env_success  pad_offset= 3.0 cm
+seed 1043: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=10.8 cm
+seed 1044: success  steps= 44  max_lift=  7.3 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1045: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1046: FAIL     steps=150  max_lift=  4.6 cm  ended: timeout  pad_offset= 5.7 cm
+seed 1047: success  steps= 46  max_lift=  5.8 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1048: success  steps= 64  max_lift=  8.8 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1049: success  steps= 88  max_lift=  8.7 cm  ended: env_success  pad_offset= 1.5 cm
+pp_act_030000: 25/50 placed on the pad = 50%  (95% CI 37% to 63%)
+  cube lifted at all (over 2 cm): 41/50
+  episodes ended by cube leaving the table patch: 1/50
+[2026-10-15 04:00:25] training SmolVLA -> outputs/train/smolvla_pickplace_30k
+[2026-10-15 10:50:18] SmolVLA training finished
+[2026-10-15 10:50:38] evaluating SmolVLA 005000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: FAIL     steps=150  max_lift=  9.1 cm  ended: timeout  pad_offset= 7.3 cm
+seed 1001: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=13.7 cm
+seed 1002: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=16.8 cm
+seed 1003: success  steps= 40  max_lift=  7.1 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1004: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=14.3 cm
+seed 1005: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=23.5 cm
+seed 1006: success  steps= 61  max_lift=  9.1 cm  ended: env_success  pad_offset= 4.3 cm
+seed 1007: success  steps= 39  max_lift=  6.8 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1008: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=15.5 cm
+seed 1009: success  steps= 74  max_lift=  8.1 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1010: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=13.2 cm
+seed 1011: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=14.9 cm
+seed 1012: FAIL     steps=150  max_lift=  7.3 cm  ended: timeout  pad_offset= 3.8 cm
+seed 1013: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=24.1 cm
+seed 1014: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.5 cm
+seed 1015: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=13.8 cm
+seed 1016: success  steps= 71  max_lift=  8.9 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1017: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.8 cm
+seed 1018: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.6 cm
+seed 1019: success  steps= 96  max_lift=  9.3 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1020: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.3 cm
+seed 1021: FAIL     steps=150  max_lift=  7.7 cm  ended: timeout  pad_offset= 6.1 cm
+seed 1022: success  steps=124  max_lift=  7.2 cm  ended: env_success  pad_offset= 2.8 cm
+seed 1023: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=19.2 cm
+seed 1024: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=10.8 cm
+seed 1025: success  steps=123  max_lift=  8.8 cm  ended: env_success  pad_offset= 3.2 cm
+seed 1026: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=23.5 cm
+seed 1027: success  steps=100  max_lift=  6.8 cm  ended: env_success  pad_offset= 2.8 cm
+seed 1028: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=16.2 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.5 cm
+seed 1030: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=16.0 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.1 cm
+seed 1032: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=13.4 cm
+seed 1033: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=19.2 cm
+seed 1034: FAIL     steps=150  max_lift= 11.3 cm  ended: timeout  pad_offset= 4.9 cm
+seed 1035: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=12.2 cm
+seed 1036: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=17.8 cm
+seed 1037: success  steps= 96  max_lift=  7.1 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1038: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=28.8 cm
+seed 1039: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.5 cm
+seed 1040: success  steps= 55  max_lift=  6.7 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.4 cm
+seed 1042: success  steps= 43  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.4 cm
+seed 1043: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=11.1 cm
+seed 1044: success  steps=146  max_lift=  6.7 cm  ended: env_success  pad_offset= 4.4 cm
+seed 1045: success  steps=147  max_lift=  9.0 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1046: FAIL     steps=150  max_lift=  6.5 cm  ended: timeout  pad_offset= 5.1 cm
+seed 1047: success  steps= 43  max_lift=  8.0 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1048: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=11.6 cm
+seed 1049: FAIL     steps=150  max_lift=  8.1 cm  ended: timeout  pad_offset= 2.6 cm
+pp_smolvla_005000: 15/50 placed on the pad = 30%  (95% CI 19% to 44%)
+  cube lifted at all (over 2 cm): 21/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 10:55:26] evaluating SmolVLA 010000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 40  max_lift=  6.8 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1001: FAIL     steps=150  max_lift=  0.9 cm  ended: timeout  pad_offset=13.2 cm
+seed 1002: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=16.6 cm
+seed 1003: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.1 cm
+seed 1004: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.1 cm
+seed 1005: success  steps= 48  max_lift=  7.1 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1006: success  steps= 42  max_lift=  7.0 cm  ended: env_success  pad_offset= 4.2 cm
+seed 1007: success  steps= 74  max_lift=  7.3 cm  ended: env_success  pad_offset= 3.9 cm
+seed 1008: success  steps= 40  max_lift=  6.8 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1009: FAIL     steps=150  max_lift=  9.0 cm  ended: timeout  pad_offset= 2.9 cm
+seed 1010: FAIL     steps=150  max_lift=  0.4 cm  ended: timeout  pad_offset=13.0 cm
+seed 1011: FAIL     steps=150  max_lift=  7.5 cm  ended: timeout  pad_offset= 3.3 cm
+seed 1012: success  steps= 46  max_lift=  6.5 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1013: success  steps= 64  max_lift=  6.9 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1014: success  steps= 83  max_lift=  6.9 cm  ended: env_success  pad_offset= 4.0 cm
+seed 1015: success  steps= 56  max_lift=  8.9 cm  ended: env_success  pad_offset= 4.0 cm
+seed 1016: success  steps= 40  max_lift=  6.9 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1017: success  steps= 46  max_lift=  4.2 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1018: FAIL     steps=150  max_lift=  8.3 cm  ended: timeout  pad_offset= 6.4 cm
+seed 1019: success  steps= 47  max_lift=  6.9 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1020: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.1 cm
+seed 1021: success  steps= 76  max_lift=  7.1 cm  ended: env_success  pad_offset= 4.1 cm
+seed 1022: success  steps= 50  max_lift=  6.4 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1023: success  steps=149  max_lift=  6.7 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1024: success  steps= 40  max_lift=  6.3 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1025: success  steps= 39  max_lift=  6.7 cm  ended: env_success  pad_offset= 2.7 cm
+seed 1026: success  steps= 46  max_lift=  6.9 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1027: success  steps= 46  max_lift=  6.9 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1028: FAIL     steps=150  max_lift=  7.1 cm  ended: timeout  pad_offset= 7.7 cm
+seed 1029: FAIL     steps=150  max_lift=  0.8 cm  ended: timeout  pad_offset=15.5 cm
+seed 1030: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=17.4 cm
+seed 1031: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=24.3 cm
+seed 1032: success  steps= 41  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1033: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=18.9 cm
+seed 1034: success  steps= 58  max_lift=  8.9 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: success  steps= 72  max_lift=  8.5 cm  ended: env_success  pad_offset= 3.7 cm
+seed 1037: success  steps= 92  max_lift= 10.2 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1038: success  steps= 49  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1039: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=15.0 cm
+seed 1040: success  steps= 54  max_lift=  7.0 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1041: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=12.8 cm
+seed 1042: success  steps= 41  max_lift=  7.0 cm  ended: env_success  pad_offset= 2.8 cm
+seed 1043: success  steps= 42  max_lift=  6.7 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1044: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=13.2 cm
+seed 1045: success  steps= 57  max_lift=  6.7 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1046: success  steps= 48  max_lift=  6.2 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1047: success  steps= 43  max_lift=  6.6 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1048: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=10.0 cm
+seed 1049: success  steps= 40  max_lift=  6.8 cm  ended: env_success  pad_offset= 2.0 cm
+pp_smolvla_010000: 31/50 placed on the pad = 62%  (95% CI 48% to 74%)
+  cube lifted at all (over 2 cm): 35/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 10:58:45] evaluating SmolVLA 015000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 41  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.7 cm
+seed 1001: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=11.9 cm
+seed 1002: success  steps= 43  max_lift=  7.4 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1003: success  steps= 40  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1004: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.2 cm
+seed 1005: success  steps= 46  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1006: success  steps= 44  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1007: success  steps= 39  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.9 cm
+seed 1008: success  steps= 41  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.7 cm
+seed 1009: success  steps= 57  max_lift=  4.8 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1010: success  steps= 40  max_lift=  4.7 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1011: success  steps= 40  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.2 cm
+seed 1012: success  steps=127  max_lift=  9.3 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1013: success  steps= 45  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1014: FAIL     steps=135  max_lift=  7.6 cm  ended: out_of_bounds  pad_offset= 8.7 cm
+seed 1015: success  steps= 41  max_lift=  7.6 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1016: success  steps= 40  max_lift=  7.3 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1017: success  steps= 43  max_lift=  7.3 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1018: FAIL     steps=150  max_lift=  9.9 cm  ended: timeout  pad_offset= 2.9 cm
+seed 1019: success  steps=104  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1020: success  steps= 58  max_lift=  7.4 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1021: success  steps= 44  max_lift=  7.2 cm  ended: env_success  pad_offset= 3.2 cm
+seed 1022: success  steps= 64  max_lift=  8.4 cm  ended: env_success  pad_offset= 2.8 cm
+seed 1023: success  steps=125  max_lift=  7.4 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1024: success  steps= 41  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1025: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1026: success  steps= 45  max_lift=  7.8 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1027: success  steps= 45  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1028: success  steps= 41  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=18.3 cm
+seed 1030: FAIL     steps=150  max_lift=  0.9 cm  ended: timeout  pad_offset=11.7 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.1 cm
+seed 1032: success  steps= 42  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1033: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=19.6 cm
+seed 1034: success  steps= 72  max_lift= 10.2 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: success  steps=100  max_lift=  8.6 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1037: success  steps= 41  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1038: FAIL     steps=150  max_lift=  9.4 cm  ended: timeout  pad_offset= 9.4 cm
+seed 1039: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=16.5 cm
+seed 1040: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=14.9 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.6 cm
+seed 1042: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1043: success  steps= 41  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1044: success  steps= 42  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1045: success  steps= 72  max_lift=  7.7 cm  ended: env_success  pad_offset= 2.7 cm
+seed 1046: success  steps= 64  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1047: success  steps= 44  max_lift=  7.2 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1048: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset= 9.5 cm
+seed 1049: success  steps= 57  max_lift=  7.7 cm  ended: env_success  pad_offset= 0.8 cm
+pp_smolvla_015000: 36/50 placed on the pad = 72%  (95% CI 58% to 83%)
+  cube lifted at all (over 2 cm): 39/50
+  episodes ended by cube leaving the table patch: 1/50
+[2026-10-15 11:01:46] evaluating SmolVLA 020000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 42  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1001: FAIL     steps=150  max_lift=  0.7 cm  ended: timeout  pad_offset=11.4 cm
+seed 1002: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=16.3 cm
+seed 1003: success  steps= 40  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1004: success  steps= 43  max_lift=  7.1 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1005: success  steps= 46  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1006: success  steps= 42  max_lift=  7.4 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1007: success  steps= 41  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1008: success  steps= 40  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1009: FAIL     steps=150  max_lift=  8.1 cm  ended: timeout  pad_offset= 4.4 cm
+seed 1010: FAIL     steps=150  max_lift=  7.5 cm  ended: timeout  pad_offset= 3.5 cm
+seed 1011: success  steps= 39  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1012: success  steps= 45  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1013: success  steps= 46  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1014: success  steps= 63  max_lift=  7.9 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1015: success  steps=106  max_lift=  7.9 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1016: success  steps= 40  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1017: success  steps= 43  max_lift=  7.0 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1018: success  steps= 45  max_lift=  7.4 cm  ended: env_success  pad_offset= 4.1 cm
+seed 1019: success  steps= 66  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1020: FAIL     steps=150  max_lift= 10.9 cm  ended: timeout  pad_offset= 3.8 cm
+seed 1021: success  steps= 43  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1022: success  steps= 49  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1023: success  steps= 58  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1024: success  steps= 40  max_lift=  7.0 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1025: success  steps= 39  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.5 cm
+seed 1026: success  steps= 44  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1027: success  steps= 46  max_lift=  7.3 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1028: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.4 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=17.5 cm
+seed 1030: success  steps= 40  max_lift=  7.9 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.0 cm
+seed 1032: success  steps= 42  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.9 cm
+seed 1033: FAIL     steps=150  max_lift=  0.2 cm  ended: timeout  pad_offset=19.0 cm
+seed 1034: success  steps= 58  max_lift=  9.2 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: success  steps=147  max_lift=  9.3 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1037: success  steps= 40  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1038: success  steps= 47  max_lift=  4.7 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1039: success  steps= 41  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1040: success  steps= 55  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.5 cm
+seed 1041: FAIL     steps=150  max_lift=  1.3 cm  ended: timeout  pad_offset= 9.5 cm
+seed 1042: success  steps=113  max_lift=  7.7 cm  ended: env_success  pad_offset= 3.1 cm
+seed 1043: success  steps=138  max_lift=  8.2 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1044: success  steps= 42  max_lift=  7.2 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1045: success  steps= 56  max_lift=  7.1 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1046: success  steps= 48  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1047: success  steps= 43  max_lift=  7.2 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1048: success  steps= 40  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1049: success  steps= 40  max_lift=  7.2 cm  ended: env_success  pad_offset= 3.4 cm
+pp_smolvla_020000: 39/50 placed on the pad = 78%  (95% CI 65% to 87%)
+  cube lifted at all (over 2 cm): 42/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 11:04:33] evaluating SmolVLA 025000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: FAIL     steps=150  max_lift=  9.3 cm  ended: timeout  pad_offset= 4.8 cm
+seed 1001: success  steps= 42  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1002: success  steps= 44  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1003: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1004: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.9 cm
+seed 1005: success  steps= 46  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1006: success  steps= 42  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.9 cm
+seed 1007: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1008: success  steps= 41  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1009: success  steps= 76  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1010: FAIL     steps=150  max_lift=  8.1 cm  ended: timeout  pad_offset= 5.7 cm
+seed 1011: success  steps= 39  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1012: success  steps= 46  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1013: success  steps= 46  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1014: success  steps= 46  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1015: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1016: success  steps= 40  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1017: success  steps= 44  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1018: FAIL     steps=150  max_lift=  9.7 cm  ended: timeout  pad_offset= 3.4 cm
+seed 1019: success  steps= 63  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.5 cm
+seed 1020: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1021: success  steps= 43  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1022: success  steps= 49  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1023: success  steps= 75  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1024: success  steps= 42  max_lift=  7.2 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1025: success  steps= 39  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.8 cm
+seed 1026: success  steps= 45  max_lift=  8.1 cm  ended: env_success  pad_offset= 0.2 cm
+seed 1027: success  steps= 45  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1028: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.9 cm
+seed 1029: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=17.6 cm
+seed 1030: success  steps=143  max_lift= 10.8 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.1 cm
+seed 1032: success  steps= 42  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.2 cm
+seed 1033: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=19.1 cm
+seed 1034: success  steps= 39  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: FAIL     steps=150  max_lift=  8.1 cm  ended: timeout  pad_offset= 5.7 cm
+seed 1037: success  steps= 41  max_lift=  7.6 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1038: FAIL     steps=150  max_lift=  9.3 cm  ended: timeout  pad_offset= 8.0 cm
+seed 1039: FAIL     steps=150  max_lift=  0.6 cm  ended: timeout  pad_offset=18.1 cm
+seed 1040: success  steps= 39  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.8 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.6 cm
+seed 1042: FAIL     steps=150  max_lift=  7.4 cm  ended: timeout  pad_offset= 7.0 cm
+seed 1043: success  steps=107  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1044: success  steps= 42  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1045: success  steps=119  max_lift=  7.7 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1046: success  steps= 48  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1047: success  steps= 43  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1048: success  steps= 74  max_lift=  8.1 cm  ended: env_success  pad_offset= 1.5 cm
+seed 1049: success  steps= 41  max_lift=  7.3 cm  ended: env_success  pad_offset= 3.0 cm
+pp_smolvla_025000: 36/50 placed on the pad = 72%  (95% CI 58% to 83%)
+  cube lifted at all (over 2 cm): 42/50
+  episodes ended by cube leaving the table patch: 0/50
+[2026-10-15 11:07:31] evaluating SmolVLA 030000
+  gym.logger.warn(
+  gym.logger.warn(
+seed 1000: success  steps= 94  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.6 cm
+seed 1001: success  steps= 42  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1002: success  steps= 43  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1003: success  steps= 39  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1004: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=14.8 cm
+seed 1005: success  steps= 46  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1006: success  steps= 42  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.5 cm
+seed 1007: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1008: success  steps= 40  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1009: success  steps= 40  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.4 cm
+seed 1010: FAIL     steps=150  max_lift=  9.4 cm  ended: timeout  pad_offset= 4.4 cm
+seed 1011: success  steps= 39  max_lift=  7.3 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1012: success  steps= 77  max_lift=  7.5 cm  ended: env_success  pad_offset= 1.6 cm
+seed 1013: success  steps= 46  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.3 cm
+seed 1014: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1015: success  steps= 55  max_lift=  7.6 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1016: success  steps= 40  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.3 cm
+seed 1017: success  steps= 44  max_lift=  7.3 cm  ended: env_success  pad_offset= 0.7 cm
+seed 1018: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 3.3 cm
+seed 1019: success  steps= 63  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1020: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.4 cm
+seed 1021: success  steps= 43  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1022: success  steps= 49  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.0 cm
+seed 1023: success  steps= 56  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.0 cm
+seed 1024: success  steps= 41  max_lift=  7.1 cm  ended: env_success  pad_offset= 1.1 cm
+seed 1025: success  steps= 39  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.6 cm
+seed 1026: success  steps= 45  max_lift=  7.5 cm  ended: env_success  pad_offset= 0.4 cm
+seed 1027: success  steps= 46  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.3 cm
+seed 1028: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.8 cm
+seed 1029: FAIL     steps=150  max_lift=  0.1 cm  ended: timeout  pad_offset=16.4 cm
+seed 1030: FAIL     steps=150  max_lift=  7.6 cm  ended: timeout  pad_offset= 5.5 cm
+seed 1031: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=26.1 cm
+seed 1032: success  steps= 42  max_lift=  7.6 cm  ended: env_success  pad_offset= 1.4 cm
+seed 1033: FAIL     steps=150  max_lift=  0.3 cm  ended: timeout  pad_offset=19.1 cm
+seed 1034: success  steps= 41  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.5 cm
+seed 1035: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=12.9 cm
+seed 1036: success  steps= 51  max_lift=  7.7 cm  ended: env_success  pad_offset= 3.7 cm
+seed 1037: success  steps= 40  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.6 cm
+seed 1038: success  steps= 67  max_lift=  6.5 cm  ended: env_success  pad_offset= 4.6 cm
+seed 1039: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=16.0 cm
+seed 1040: success  steps= 39  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1041: FAIL     steps=150  max_lift=  0.0 cm  ended: timeout  pad_offset=13.6 cm
+seed 1042: success  steps= 41  max_lift=  7.5 cm  ended: env_success  pad_offset= 2.9 cm
+seed 1043: success  steps= 82  max_lift=  7.4 cm  ended: env_success  pad_offset= 3.2 cm
+seed 1044: success  steps= 42  max_lift=  7.4 cm  ended: env_success  pad_offset= 1.7 cm
+seed 1045: success  steps=103  max_lift=  9.7 cm  ended: env_success  pad_offset= 3.5 cm
+seed 1046: success  steps= 48  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.1 cm
+seed 1047: success  steps= 43  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.2 cm
+seed 1048: success  steps= 40  max_lift=  7.4 cm  ended: env_success  pad_offset= 2.5 cm
+seed 1049: success  steps= 75  max_lift=  7.3 cm  ended: env_success  pad_offset= 2.1 cm
+pp_smolvla_030000: 40/50 placed on the pad = 80%  (95% CI 67% to 89%)
+  cube lifted at all (over 2 cm): 42/50
+  episodes ended by cube leaving the table patch: 0/50
+
+Pick-and-place, cube placed on the pad, seeds 1000-1049
+policy    step    success   rate   95% CI
+act        5000    5/50      10%   4% to 21%
+act       10000   20/50      40%   28% to 54%
+act       15000   20/50      40%   28% to 54%
+act       20000   21/50      42%   29% to 56%
+act       25000   26/50      52%   38% to 65%
+act       30000   25/50      50%   37% to 63%
+smolvla    5000   15/50      30%   19% to 44%
+smolvla   10000   31/50      62%   48% to 74%
+smolvla   15000   36/50      72%   58% to 82%
+smolvla   20000   39/50      78%   65% to 87%
+smolvla   25000   36/50      72%   58% to 82%
+smolvla   30000   40/50      80%   67% to 89%
+[2026-10-15 11:10:12] all done

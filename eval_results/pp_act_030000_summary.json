@@ -1,0 +1,26 @@
+{
+  "name": "pp_act_030000",
+  "episodes": 50,
+  "env": "pick_place",
+  "task": "pick up the cube and place it on the yellow pad",
+  "success_placed": {
+    "count": 25,
+    "rate": 0.5,
+    "ci95": [
+      0.366,
+      0.634
+    ]
+  },
+  "lifted_over_2.0cm": {
+    "count": 41,
+    "rate": 0.82,
+    "ci95": [
+      0.692,
+      0.902
+    ]
+  },
+  "ended_out_of_bounds": 1,
+  "mean_step_when_threshold_reached": 61.0,
+  "first_seed": 1000,
+  "max_steps": 150
+}

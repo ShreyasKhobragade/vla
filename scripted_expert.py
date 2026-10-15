@@ -62,3 +62,53 @@ class PickCubeExpert:
         if self.noise > 0 and self.phase in ("hover", "descend"):
             a = np.clip(a + self.rng.normal(0, self.noise, 3), -1, 1)
         return np.array([*a, grip], dtype=np.float32)
+
+
+class PickPlaceExpert(PickCubeExpert):
+    """Pick the cube, carry it over the target pad, lower it, open the gripper and back away.
+
+    Used with pick_place_env.PandaPickPlaceGymEnv. The first phases (hover, descend, close)
+    are the pick-cube expert's; after the grasp it lifts only to carry_z instead of lift_z.
+    """
+
+    def __init__(self, carry_z=0.10, place_z=0.026, open_steps=4, retreat_z=0.12, **kwargs):
+        super().__init__(**kwargs)
+        self.carry_z, self.place_z = carry_z, place_z
+        self.open_steps, self.retreat_z = open_steps, retreat_z
+
+    def act(self, env):
+        if self.phase in ("hover", "descend", "close"):
+            a = super().act(env)
+            if self.phase == "lift":  # the parent just finished closing
+                self.phase = "carry_up"
+            return a
+
+        u = env.unwrapped
+        pad = u.pad_pos
+        tcp = np.array(u._data.sensor("2f85/pinch_pos").data)
+        mocap = np.array(u._data.mocap_pos[0])
+        grip = GRIP_HOLD
+
+        if self.phase == "carry_up":
+            target = np.array([tcp[0], tcp[1], self.carry_z])
+            if abs(tcp[2] - self.carry_z) < self.z_tol * 2:
+                self.phase = "carry"
+        if self.phase == "carry":
+            target = np.array([pad[0], pad[1], self.carry_z])
+            if np.linalg.norm(tcp[:2] - pad[:2]) < self.xy_tol:
+                self.phase = "lower"
+        if self.phase == "lower":
+            target = np.array([pad[0], pad[1], self.place_z])
+            if abs(tcp[2] - self.place_z) < self.z_tol:
+                self.phase = "open"
+                self.counter = 0
+        if self.phase == "open":
+            target = np.array([pad[0], pad[1], self.place_z])
+            grip = GRIP_OPEN
+            self.counter += 1
+            if self.counter >= self.open_steps:
+                self.phase = "retreat"
+        if self.phase == "retreat":
+            target = np.array([pad[0], pad[1], self.retreat_z])
+
+        return np.array([*self._goto(mocap, target), grip], dtype=np.float32)

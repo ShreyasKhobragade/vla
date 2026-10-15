@@ -3,9 +3,12 @@
   python tools/make_readme_media.py
 
 Writes to assets/:
-  rollouts.gif          expert, ACT and SmolVLA on the same cube (seed 1000), side by side
-  failure_act.gif       an ACT failure (seed 1001): the gripper closes before it reaches the cube
-  success_curve_light.png / success_curve_dark.png   success rate vs training step
+  rollouts.gif                  pick-cube: expert, ACT and SmolVLA on the same cube (seed 1000)
+  failure_act.gif               pick-cube: an ACT failure (seed 1001), the gripper closes too early
+  success_curve_{light,dark}.png             pick-cube success rate vs training step
+  pickplace_rollouts.gif        pick-and-place: expert, ACT and SmolVLA on the same cube and pad (seed 1011)
+  pickplace_compare.gif         pick-and-place: ACT stalls short of the pad, SmolVLA places it (seed 1002)
+  pickplace_curve_{light,dark}.png           pick-and-place success rate vs training step
 """
 import csv
 from pathlib import Path
@@ -48,13 +51,9 @@ def up(im):
     return im.resize((im.width * SCALE, im.height * SCALE), Image.NEAREST)
 
 
-def make_rollouts():
-    columns = [
-        ("Scripted expert", "expert_seed1000_ok"),
-        ("ACT (30k steps)", "actv2_30k_videos_seed1000_ok"),
-        ("SmolVLA (30k steps)", "smolvla30k_030000_seed1000_ok"),
-    ]
-    rollouts = [load_rollout(f) for _, f in columns]
+def make_rollouts(columns, out_name, max_frames=None):
+    """Side-by-side rollouts: one column per (title, eval GIF name), front camera above wrist camera."""
+    rollouts = [load_rollout(f)[:max_frames] for _, f in columns]
     n = max(len(r) for r in rollouts) + HOLD_FRAMES
     cell, header, gap = 128 * SCALE, 34, 6
     width = len(columns) * cell + (len(columns) - 1) * gap
@@ -71,7 +70,7 @@ def make_rollouts():
             canvas.paste(up(front), (x, header))
             canvas.paste(up(wrist), (x, header + cell + gap))
         out.append(canvas)
-    save_gif(out, ASSETS / "rollouts.gif")
+    save_gif(out, ASSETS / out_name)
 
 
 def make_failure():
@@ -123,12 +122,12 @@ THEMES = {
 }
 
 
-def make_curve(theme):
+def make_curve(theme, prefixes, title, out_name, y_min):
     th = THEMES[theme]
     fig, ax = plt.subplots(figsize=(8, 4.2), dpi=150)
     fig.patch.set_facecolor(th["surface"])
     ax.set_facecolor(th["surface"])
-    series = [("ACT", curve("actv2")), ("SmolVLA", curve("smolvla30k"))]
+    series = [("ACT", curve(prefixes[0])), ("SmolVLA", curve(prefixes[1]))]
     handles = []
     for (label, (x, y, lo, hi)), color, dx, dy in zip(series, th["series"], (-0.25, 0.25), (7, -7)):
         ax.errorbar(x + dx, y, yerr=[y - lo, hi - y], color=color, lw=2, marker="o", ms=6,
@@ -140,12 +139,12 @@ def make_curve(theme):
     ax.axhline(100, color=th["muted"], lw=1, ls=(0, (4, 3)), zorder=1)
     ax.text(5, 101.5, "scripted expert 100%", color=th["muted"], fontsize=9, va="bottom")
     ax.set_xlim(3.5, 34)
-    ax.set_ylim(50, 106)
+    ax.set_ylim(y_min, 106)
     ax.set_xticks(range(5, 31, 5), [f"{s}k" for s in range(5, 31, 5)])
-    ax.set_yticks(range(50, 101, 10), [f"{v}%" for v in range(50, 101, 10)])
+    tick = 10 if y_min >= 50 else 20
+    ax.set_yticks(range(y_min, 101, tick), [f"{v}%" for v in range(y_min, 101, tick)])
     ax.set_xlabel("training steps", color=th["muted"])
-    ax.set_title("Success rate on 50 fixed test cube positions (cube lifted ≥ 5 cm)",
-                 color=th["text"], fontsize=11, loc="left", pad=12)
+    ax.set_title(title, color=th["text"], fontsize=11, loc="left", pad=12)
     ax.grid(axis="y", color=th["grid"], lw=0.8)
     ax.tick_params(colors=th["muted"], length=0)
     for side in ("top", "right", "left"):
@@ -157,7 +156,7 @@ def make_curve(theme):
     fig.text(0.125, 0.01, "Bars: 95% Wilson confidence intervals. Points nudged sideways so the bars don't overlap.",
              color=th["muted"], fontsize=8)
     fig.tight_layout(rect=(0, 0.03, 1, 1))
-    path = ASSETS / f"success_curve_{theme}.png"
+    path = ASSETS / f"{out_name}_{theme}.png"
     fig.savefig(path, facecolor=th["surface"])
     plt.close(fig)
     print(f"wrote {path.relative_to(ROOT)}")
@@ -165,7 +164,18 @@ def make_curve(theme):
 
 if __name__ == "__main__":
     ASSETS.mkdir(exist_ok=True)
-    make_rollouts()
+    make_rollouts([("Scripted expert", "expert_seed1000_ok"),
+                   ("ACT (30k steps)", "actv2_30k_videos_seed1000_ok"),
+                   ("SmolVLA (30k steps)", "smolvla30k_030000_seed1000_ok")], "rollouts.gif")
     make_failure()
+    make_rollouts([("Scripted expert", "pickplace_expert_seed1011_ok"),
+                   ("ACT (30k steps)", "pp_act_030000_seed1011_ok"),
+                   ("SmolVLA (30k steps)", "pp_smolvla_030000_seed1011_ok")], "pickplace_rollouts.gif")
+    make_rollouts([("ACT: stalls short of the pad", "pp_act_030000_seed1002_fail"),
+                   ("SmolVLA: places the cube", "pp_smolvla_030000_seed1002_ok")],
+                  "pickplace_compare.gif", max_frames=80)
     for theme in THEMES:
-        make_curve(theme)
+        make_curve(theme, ("actv2", "smolvla30k"),
+                   "Pick cube: success on 50 fixed test positions (cube lifted ≥ 5 cm)", "success_curve", 50)
+        make_curve(theme, ("pp_act", "pp_smolvla"),
+                   "Pick and place: success on 50 fixed test positions (cube left on the pad)", "pickplace_curve", 0)
