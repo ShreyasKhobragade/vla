@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Waits for the SmolVLA 30k training run to end, then evaluates each saved checkpoint
-# on the same 50 seeded cubes and prints a results table. Progress goes to eval_after_training.log.
+# on the same 50 seeded cubes and prints a results table. Progress goes to logs/eval_after_training.log.
 cd ~/vla || exit 1
 RUN=outputs/train/smolvla_v2_30k
-exec >> eval_after_training.log 2>&1
+exec >> logs/eval_after_training.log 2>&1
 
 echo "[$(date)] waiting for training to finish"
 while pgrep -f "bin/lerobot-train" > /dev/null; do sleep 60; done
